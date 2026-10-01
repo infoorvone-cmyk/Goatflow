@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goatflow — Digital Livestock Ownership & Investment Platform</title>
+  <meta name="description" content="Goatflow connects investors with real goat farming assets through a transparent digital platform. Earn up to 20% monthly returns on real livestock assets.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%3E<text y=%22.9em%22 font-size=%2290%22>🐐</text></svg>">
+</head>
+<body>
+
+  <!-- ─── TOP NOTIFICATION BANNER ────────────────────────────────────────── -->
+  <div class="ticker-wrap">
+    <div class="ticker-content">
+      <div class="ticker-item">🐐 <span class="highlight">Goatflow Q1 2025:</span> Beetal &amp; Kamori batches now available for active fractional ownership</div>
+      <div class="ticker-item">📈 <span class="highlight">Up to 20% Monthly Returns:</span> Backed by physical weight gain &amp; ethical commercial farm operations</div>
+      <div class="ticker-item">🛡️ <span class="highlight">Transparent Asset Sharing:</span> Every goat tracked with digital RFID ear tags &amp; veterinary logs</div>
+      <div class="ticker-item">💳 <span class="highlight">Manual Crypto Verification:</span> USDT (TRC20), Binance Pay ID, and Bitcoin accepted</div>
+    </div>
+  </div>
+
+  <!-- ─── NAVBAR ─────────────────────────────────────────────────────────── -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <div class="logo-icon">🐐</div>
+        <div>
+          <span style="color:#fff">Goat</span><span class="gradient-text">flow</span>
+          <span class="logo-badge">Platform Overview</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#packages">Investment Packages</a></li>
+        <li><a href="#calculator">ROI Calculator</a></li>
+        <li><a href="#dashboard-preview">Investor Dashboard</a></li>
+        <li><a href="#payments">Payment &amp; Withdrawals</a></li>
+        <li><a href="#why-us">Why Choose Us</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <button class="btn btn-secondary" onclick="openPaymentModal('starter')" style="padding:10px 20px;font-size:13.5px">Sign In</button>
+        <button class="btn btn-primary" onclick="openPaymentModal('elite')" style="padding:10px 22px;font-size:13.5px">Invest Now</button>
+      </div>
+
+      <button class="mobile-toggle" onclick="toggleMobileMenu()">☰</button>
+    </div>
+  </nav>
+
+  <!-- ─── HERO SECTION ───────────────────────────────────────────────────── -->
+  <header class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="section-tag">
+          <span>🌿 Real Goats • Real Growth • Real Impact</span>
+        </div>
+        <h1>
+          Goatflow <span class="gradient-text">Platform Overview</span>
+          <br>
+          <span style="font-size:0.75em;color:#e2e8f0;font-weight:700">Digital Livestock Ownership &amp; Investment Platform</span>
+        </h1>
+        <p class="hero-subtitle">
+          Goatflow connects everyday investors with high-yield physical goat farming assets through a 100% transparent digital platform. Earn sustainable monthly returns backed by real agricultural growth.
+        </p>
+
+        <!-- 4 Badges from Infographic -->
+        <div class="hero-badges-row">
+          <div class="hero-badge-pill">
+            <div class="hero-badge-icon">🌿</div>
+            <div class="hero-badge-text">
+              REAL ASSETS
+              <span>Physical Goat Farming</span>
+            </div>
+          </div>
+          <div class="hero-badge-pill">
+            <div class="hero-badge-icon">📈</div>
+            <div class="hero-badge-text">
+              MONTHLY RETURNS
+              <span>Up to 20% Projected</span>
+            </div>
+          </div>
+          <div class="hero-badge-pill">
+            <div class="hero-badge-icon">🛡️</div>
+            <div class="hero-badge-text">
+              TRANSPARENT
+              <span>Actual Asset Share</span>
+            </div>
+          </div>
+          <div class="hero-badge-pill">
+            <div class="hero-badge-icon">👥</div>
+            <div class="hero-badge-text">
+              SECURE INVESTMENT
+              <span>Your Growth, Our Priority</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn btn-gold" onclick="openPaymentModal('elite')">
+            <span>🚀 Explore Packages &amp; Invest</span>
+          </button>
+          <a href="#dashboard-preview" class="btn btn-secondary">
+            <span>📊 View Live Dashboard Demo</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Visual / Live Card -->
+      <div class="hero-visual">
+        <div class="hero-main-card">
+          <div class="hero-card-header">
+            <div class="live-indicator">
+              <span class="live-dot"></span>
+              <span>LIVE ASSET MONITOR</span>
+            </div>
+            <span style="font-size:12px;color:var(--gold-400);font-weight:800;background:rgba(245,158,11,.15);padding:4px 10px;border-radius:12px">ACTIVE FARM #01</span>
+          </div>
+
+          <div class="asset-preview-box">
+            <div class="asset-preview-img">🐐</div>
+            <div class="asset-preview-meta">
+              <span class="asset-tag">Goat ID: GF-001 (Beetal Breed)</span>
+              <h4 style="font-size:16px;color:#fff;margin-bottom:4px">Punjab Commercial Pasture Batch</h4>
+              <p style="font-size:12.5px;color:var(--text-muted)">Current Weight: 48.5 kg · Vaccination: Complete</p>
+            </div>
+          </div>
+
+          <div class="hero-stats-row">
+            <div class="stat-box">
+              <div class="val" style="color:#34d399">$300</div>
+              <div class="lbl">Investment (PKR 85k)</div>
+            </div>
+            <div class="stat-box">
+              <div class="val" style="color:#fbbf24">$360</div>
+              <div class="lbl">Asset Value (+20%)</div>
+            </div>
+            <div class="stat-box">
+              <div class="val" style="color:#38bdf8">$60/mo</div>
+              <div class="lbl">Monthly Profit</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ─── HOW IT WORKS (6-STEP FLOW) ─────────────────────────────────────── -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-heading">
+        <div class="section-tag">Simple &amp; Transparent</div>
+        <h2>How <span class="gradient-text">Goatflow Works</span></h2>
+        <p>A step-by-step transparent investment process designed for complete peace of mind.</p>
+      </div>
+
+      <div class="process-grid">
+        <!-- Step 1 -->
+        <div class="process-step-card">
+          <div class="step-number">1</div>
+          <div class="step-icon">👤</div>
+          <h3>Create Account</h3>
+          <p>Sign up in under 60 seconds and complete your investor profile.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="process-step-card">
+          <div class="step-number">2</div>
+          <div class="step-icon">📦</div>
+          <h3>Choose Package</h3>
+          <p>Select an investment package ($50 to $300) tailored to your financial goals.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="process-step-card">
+          <div class="step-number">3</div>
+          <div class="step-icon">💳</div>
+          <h3>Manual Payment</h3>
+          <p>Send payment via USDT, BTC, or Binance Pay ID and submit proof details.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="process-step-card">
+          <div class="step-number">4</div>
+          <div class="step-icon">🐐</div>
+          <h3>Get Goat Share</h3>
+          <p>Receive your digital ownership certificate with active RFID goat tagging.</p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="process-step-card">
+          <div class="step-number">5</div>
+          <div class="step-icon">📊</div>
+          <h3>Track Value &amp; Profit</h3>
+          <p>Monitor real-time asset weight, health records, and monthly profits up to 20%.</p>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="process-step-card">
+          <div class="step-number">6</div>
+          <div class="step-icon">🔄</div>
+          <h3>Withdraw Equity</h3>
+          <p>Withdraw monthly profits or transfer your goat ownership anytime (5% exit fee).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── INVESTMENT PACKAGES SECTION ────────────────────────────────────── -->
+  <section class="packages-section" id="packages">
+    <div class="container">
+      <div class="section-heading">
+        <div class="section-tag">Small Investments • Big Possibilities</div>
+        <h2>Investment <span class="gold-gradient-text">Packages</span></h2>
+        <p>Choose an authentic livestock ownership plan backed by commercial farming assets.</p>
+      </div>
+
+      <div class="packages-grid">
+        <!-- Starter $50 -->
+        <div class="package-card">
+          <div class="pkg-header">
+            <div class="pkg-title">Starter</div>
+            <div class="pkg-price-usd">$50</div>
+            <div class="pkg-price-pkr">PKR 13,000</div>
+          </div>
+          <div class="pkg-img-holder">🐐</div>
+          <ul class="pkg-features">
+            <li><span class="chk">✓</span> Minimum 6 months lockup</li>
+            <li><span class="chk">✓</span> Ownership-based asset share</li>
+            <li><span class="chk">✓</span> Manual payment verification</li>
+            <li><span class="chk">✓</span> Up to 20% monthly returns</li>
+            <li><span class="chk">✓</span> Digital Ownership Certificate</li>
+          </ul>
+          <button class="btn btn-secondary" style="width:100%" onclick="openPaymentModal('starter')">Get Started</button>
+        </div>
+
+        <!-- Growth $100 -->
+        <div class="package-card">
+          <div class="pkg-header">
+            <div class="pkg-title">Growth</div>
+            <div class="pkg-price-usd">$100</div>
+            <div class="pkg-price-pkr">PKR 28,000</div>
+          </div>
+          <div class="pkg-img-holder">🐐</div>
+          <ul class="pkg-features">
+            <li><span class="chk">✓</span> Minimum 6 months lockup</li>
+            <li><span class="chk">✓</span> Ownership-based asset share</li>
+            <li><span class="chk">✓</span> Manual payment verification</li>
+            <li><span class="chk">✓</span> Up to 20% monthly returns</li>
+            <li><span class="chk">✓</span> Digital Ownership Certificate</li>
+          </ul>
+          <button class="btn btn-secondary" style="width:100%" onclick="openPaymentModal('growth')">Get Started</button>
+        </div>
+
+        <!-- Premium $150 -->
+        <div class="package-card">
+          <div class="pkg-header">
+            <div class="pkg-title">Premium</div>
+            <div class="pkg-price-usd">$150</div>
+            <div class="pkg-price-pkr">PKR 45,000</div>
+          </div>
+          <div class="pkg-img-holder">🐐</div>
+          <ul class="pkg-features">
+            <li><span class="chk">✓</span> Minimum 6 months lockup</li>
+            <li><span class="chk">✓</span> Ownership-based asset share</li>
+            <li><span class="chk">✓</span> Manual payment verification</li>
+            <li><span class="chk">✓</span> Up to 20% monthly returns</li>
+            <li><span class="chk">✓</span> Digital Ownership Certificate</li>
+          </ul>
+          <button class="btn btn-secondary" style="width:100%" onclick="openPaymentModal('premium')">Get Started</button>
+        </div>
+
+        <!-- Advanced $200 -->
+        <div class="package-card">
+          <div class="pkg-header">
+            <div class="pkg-title">Advanced</div>
+            <div class="pkg-price-usd">$200</div>
+            <div class="pkg-price-pkr">PKR 60,000</div>
+          </div>
+          <div class="pkg-img-holder">🐐</div>
+          <ul class="pkg-features">
+            <li><span class="chk">✓</span> Minimum 6 months lockup</li>
+            <li><span class="chk">✓</span> Ownership-based asset share</li>
+            <li><span class="chk">✓</span> Manual payment verification</li>
+            <li><span class="chk">✓</span> Up to 20% monthly returns</li>
+            <li><span class="chk">✓</span> Digital Ownership Certificate</li>
+          </ul>
+          <button class="btn btn-secondary" style="width:100%" onclick="openPaymentModal('advanced')">Get Started</button>
+        </div>
+
+        <!-- Elite $300 (Featured) -->
+        <div class="package-card featured">
+          <div class="popular-ribbon">Most Popular</div>
+          <div class="pkg-header">
+            <div class="pkg-title">Elite</div>
+            <div class="pkg-price-usd" style="color:var(--gold-400)">$300</div>
+            <div class="pkg-price-pkr">PKR 85,000</div>
+          </div>
+          <div class="pkg-img-holder" style="background:rgba(245,158,11,.1);border-color:rgba(245,158,11,.3)">🐐</div>
+          <ul class="pkg-features">
+            <li><span class="chk">✓</span> Minimum 6 months lockup</li>
+            <li><span class="chk">✓</span> Full 5% goat asset allocation</li>
+            <li><span class="chk">✓</span> Priority manual verification</li>
+            <li><span class="chk">✓</span> Up to 20% monthly returns ($60/mo)</li>
+            <li><span class="chk">✓</span> Live Farm Video &amp; Vet Logs</li>
+          </ul>
+          <button class="btn btn-gold" style="width:100%" onclick="openPaymentModal('elite')">Get Started Now</button>
+        </div>
+      </div>
+
+      <!-- ─── DYNAMIC ROI CALCULATOR ─────────────────────────────────────── -->
+      <div class="calculator-box" id="calculator">
+        <div class="calc-grid">
+          <div>
+            <div class="section-tag" style="margin-bottom:8px">Interactive Tool</div>
+            <h3 style="font-size:24px;font-weight:900;color:#fff;margin-bottom:8px">Interactive Profit &amp; Growth Calculator</h3>
+            <p style="color:var(--text-muted);font-size:14px;margin-bottom:20px">
+              Slide to see projected monthly yields and your asset valuation over a 6-month cycle.
+            </p>
+
+            <label style="font-size:13px;font-weight:800;color:var(--emerald-400)">Investment Amount: <span id="calcUsdAmount" style="color:#fff;font-size:16px">$150</span> (<span id="calcPkrAmount" style="color:var(--gold-400)">PKR 42,000</span>)</label>
+            <input type="range" id="roiSlider" class="range-slider" min="50" max="1000" step="50" value="150">
+            <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text-muted);font-weight:700">
+              <span>$50 (PKR 13k)</span>
+              <span>$300 (PKR 85k)</span>
+              <span>$1,000 (PKR 280k)</span>
+            </div>
+          </div>
+
+          <div class="calc-result-box">
+            <div style="font-size:12px;font-weight:800;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px">Estimated Monthly Return (20%)</div>
+            <div id="calcMonthlyReturn" style="font-size:28px;font-weight:900;color:var(--emerald-400);margin:6px 0 16px">$30/mo (PKR 8,400)</div>
+
+            <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:16px">
+              <div style="font-size:12px;font-weight:800;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px">Total Projected Value (6 Months)</div>
+              <div id="calcTotalReturn" style="font-size:24px;font-weight:900;color:var(--gold-400);margin-top:4px">$330 (PKR 92,400)</div>
+              <div style="font-size:11px;color:var(--text-dim);margin-top:6px">Includes initial asset equity + accumulated 6-month farm profit</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── INVESTOR DASHBOARD HIGHLIGHTS ──────────────────────────────────── -->
+  <section class="dashboard-preview-section" id="dashboard-preview">
+    <div class="container">
+      <div class="section-heading">
+        <div class="section-tag">Transparency in Action</div>
+        <h2>Investor Dashboard <span class="gradient-text">Highlights</span></h2>
+        <p>Track your investments, farm asset health, and monthly profit shares in real time.</p>
+      </div>
+
+      <div class="dashboard-cockpit">
+        <!-- Top bar -->
+        <div class="cockpit-top-bar">
+          <div class="investor-badge-pill">
+            <div class="investor-avatar">AH</div>
+            <div>
+              <div style="font-size:14px;font-weight:800;color:#fff">Welcome back, Ahmed!</div>
+              <div style="font-size:11.5px;color:var(--emerald-400);font-weight:700">Verified Investor · Member since Jan 2025</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:10px">
+            <span style="font-size:12px;background:rgba(16,185,129,.15);color:var(--emerald-400);border:1px solid rgba(16,185,129,.3);padding:4px 12px;border-radius:20px;font-weight:800">● LIVE FARM SYNC</span>
+          </div>
+        </div>
+
+        <div class="cockpit-body">
+          <!-- 4 Main Cards from Infographic -->
+          <div class="cockpit-stats-grid">
+            <div class="cockpit-stat-card">
+              <div class="cs-label">Total Investment</div>
+              <div class="cs-val">$300</div>
+              <div class="cs-sub" style="color:var(--gold-400)">PKR 85,000</div>
+            </div>
+            <div class="cockpit-stat-card">
+              <div class="cs-label">Current Asset Value</div>
+              <div class="cs-val">$360</div>
+              <div class="cs-sub" style="color:var(--emerald-400)">+20% Growth</div>
+            </div>
+            <div class="cockpit-stat-card">
+              <div class="cs-label">Ownership Share</div>
+              <div class="cs-val">5%</div>
+              <div class="cs-sub" style="color:#38bdf8">Asset Share Active</div>
+            </div>
+            <div class="cockpit-stat-card">
+              <div class="cs-label">Monthly Profit</div>
+              <div class="cs-val">$60</div>
+              <div class="cs-sub" style="color:var(--emerald-400)">(20% Projected)</div>
+            </div>
+          </div>
+
+          <!-- Asset Info + Farm Updates -->
+          <div class="asset-details-grid">
+            <div class="asset-card-main">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+                <h4 style="font-size:16px;color:#fff;font-weight:800">Digital Asset: Goat ID GF-001</h4>
+                <span style="font-size:11px;font-weight:800;color:var(--emerald-400);background:rgba(16,185,129,.15);padding:3px 10px;border-radius:12px">ACTIVE</span>
+              </div>
+              
+              <div style="display:flex;gap:18px;align-items:center;margin-bottom:16px">
+                <div style="width:80px;height:80px;background:#132a1e;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:42px;border:1px solid rgba(52,211,153,.3)">🐐</div>
+                <div style="font-size:13px;line-height:1.7;color:#cbd5e1">
+                  <div><b>Breed:</b> Beetal Premium</div>
+                  <div><b>Purchase Date:</b> 10 Jan 2025</div>
+                  <div><b>Market Value:</b> PKR 25,000</div>
+                  <div><b>Ownership Share:</b> 5% Assigned</div>
+                  <div><b>Location:</b> Goatflow Commercial Farm #01</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Farm Updates -->
+            <div class="farm-updates-card">
+              <h4 style="font-size:15px;color:#fff;font-weight:800;margin-bottom:12px">Farm Updates &amp; Health Log</h4>
+              <div class="update-item">
+                <span style="color:var(--emerald-400)">✓</span>
+                <div>
+                  <div style="font-weight:700;color:#fff">Healthy &amp; Growing Well</div>
+                  <div style="font-size:11.5px;color:var(--text-muted)">Latest weigh-in shows strong continuous growth.</div>
+                </div>
+              </div>
+              <div class="update-item">
+                <span style="color:var(--emerald-400)">✓</span>
+                <div>
+                  <div style="font-weight:700;color:#fff">Regular Veterinary Checkups</div>
+                  <div style="font-size:11.5px;color:var(--text-muted)">Certified agricultural vet inspections every 14 days.</div>
+                </div>
+              </div>
+              <div class="update-item">
+                <span style="color:var(--emerald-400)">✓</span>
+                <div>
+                  <div style="font-weight:700;color:#fff">Quality Feed &amp; Care</div>
+                  <div style="font-size:11.5px;color:var(--text-muted)">High-protein organic silage &amp; clean spring water.</div>
+                </div>
+              </div>
+              <div class="update-item">
+                <span style="color:var(--emerald-400)">✓</span>
+                <div>
+                  <div style="font-weight:700;color:#fff">Latest Photos &amp; Video Streams</div>
+                  <div style="font-size:11.5px;color:var(--text-muted)">Updated footage available in your investor portal.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── MANUAL PAYMENT & WITHDRAWAL SECTION ────────────────────────────── -->
+  <section class="packages-section" id="payments">
+    <div class="container">
+      <div class="section-heading">
+        <div class="section-tag">Security &amp; Liquidity</div>
+        <h2>Manual Payment &amp; <span class="gradient-text">Withdrawal System</span></h2>
+        <p>Simple, secure payments and hassle-free liquidity with strict 5% exit transparency.</p>
+      </div>
+
+      <div class="payments-grid">
+        <!-- Manual Payment System -->
+        <div class="payment-panel">
+          <h3 style="font-size:20px;font-weight:900;color:#fff;margin-bottom:8px">Manual Payment System</h3>
+          <p style="font-size:13px;color:var(--text-muted);margin-bottom:18px">Direct manual verification prevents chargeback fraud and protects the pool.</p>
+
+          <div class="step-horizontal-list">
+            <div class="h-step-item">
+              <div class="h-step-num">1</div>
+              <div>
+                <div style="font-weight:800;color:#fff">Copy Address</div>
+                <div style="font-size:12.5px;color:var(--text-muted)">Copy Binance Pay ID, USDT (TRC20), or BTC address.</div>
+              </div>
+            </div>
+            <div class="h-step-item">
+              <div class="h-step-num">2</div>
+              <div>
+                <div style="font-weight:800;color:#fff">Send Payment</div>
+                <div style="font-size:12.5px;color:var(--text-muted)">Transfer funds manually from your exchange or wallet.</div>
+              </div>
+            </div>
+            <div class="h-step-item">
+              <div class="h-step-num">3</div>
+              <div>
+                <div style="font-weight:800;color:#fff">Submit Details</div>
+                <div style="font-size:12.5px;color:var(--text-muted)">Upload screenshot &amp; TXID for rapid validation.</div>
+              </div>
+            </div>
+            <div class="h-step-item">
+              <div class="h-step-num">4</div>
+              <div>
+                <div style="font-weight:800;color:#fff">Admin Verification</div>
+                <div style="font-size:12.5px;color:var(--text-muted)">Our finance team verifies blockchain receipt.</div>
+              </div>
+            </div>
+            <div class="h-step-item">
+              <div class="h-step-num">5</div>
+              <div>
+                <div style="font-weight:800;color:#fff">Investment Activated</div>
+                <div style="font-size:12.5px;color:var(--text-muted)">Your digital asset share is activated immediately.</div>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary" style="width:100%;margin-top:24px" onclick="openPaymentModal('elite')">Make Deposit</button>
+        </div>
+
+        <!-- Withdrawal & Transfer Process -->
+        <div class="payment-panel">
+          <h3 style="font-size:20px;font-weight:900;color:#fff;margin-bottom:8px">Withdrawal &amp; Transfer Process</h3>
+          <p style="font-size:13px;color:var(--text-muted);margin-bottom:18px">Easy and transparent withdrawal process with clear timeline.</p>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px">
+            <div style="background:rgba(0,0,0,0.3);padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.06)">
+              <div style="font-size:11px;font-weight:800;color:var(--gold-400)">DAY 1–2</div>
+              <div style="font-weight:800;color:#fff;font-size:14px">Review &amp; Approval</div>
+              <div style="font-size:11.5px;color:var(--text-muted);margin-top:4px">Verified by security team</div>
+            </div>
+            <div style="background:rgba(0,0,0,0.3);padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.06)">
+              <div style="font-size:11px;font-weight:800;color:var(--emerald-400)">DAY 3</div>
+              <div style="font-weight:800;color:#fff;font-size:14px">Transfer Processing</div>
+              <div style="font-size:11.5px;color:var(--text-muted);margin-top:4px">Funds sent to your wallet</div>
+            </div>
+          </div>
+
+          <!-- Formula Box from Infographic -->
+          <div style="background:rgba(245,158,11,.08);border:1.5px dashed rgba(245,158,11,.4);border-radius:10px;padding:16px;margin-bottom:18px">
+            <div style="font-size:13px;font-weight:800;color:var(--gold-400);margin-bottom:4px">5% Exit Fee Applied</div>
+            <div style="font-size:13.5px;color:#fff;font-weight:700">Net Withdrawal = Approved Value − 5% Fee</div>
+            <div style="font-size:12px;color:var(--text-muted);margin-top:4px">Example: If approved value is $100, net withdrawal = <b>$95</b>.</div>
+          </div>
+
+          <!-- Withdrawal Simulator Input -->
+          <div style="margin-bottom:14px">
+            <label style="font-size:12px;font-weight:700;color:var(--text-muted)">Try Withdrawal Calculator:</label>
+            <div style="display:flex;gap:10px;margin-top:6px">
+              <input type="number" id="withAmountInput" value="100" min="10" max="5000" style="flex:1;background:rgba(0,0,0,0.4);border:1px solid rgba(255,255,255,0.15);color:#fff;padding:10px 14px;border-radius:8px;font-weight:700;font-size:14px">
+              <button class="btn btn-secondary" onclick="executeDemoWithdrawal()" style="padding:10px 18px">Request Demo</button>
+            </div>
+          </div>
+
+          <div style="display:flex;justify-content:space-between;font-size:12.5px;color:#cbd5e1;padding-top:10px;border-top:1px solid rgba(255,255,255,0.06)">
+            <span>Fee (5%): <b id="withFee" style="color:var(--gold-400)">$5.00</b></span>
+            <span>You Receive: <b id="withNet" style="color:var(--emerald-400)">$95.00 (PKR 26,600)</b></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── WHY CHOOSE GOATFLOW ────────────────────────────────────────────── -->
+  <section class="how-it-works" id="why-us">
+    <div class="container">
+      <div class="section-heading">
+        <div class="section-tag">Value Proposition</div>
+        <h2>Why Investors <span class="gradient-text">Choose Goatflow</span></h2>
+        <p>A unique opportunity to be part of a real and growing sustainable industry.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">🐐</div>
+          <h3 style="font-size:16px;color:#fff;font-weight:800;margin-bottom:8px">Real Goat Ownership</h3>
+          <p style="font-size:13px;color:var(--text-muted)">Own a verified share of real, productive commercial goats in partner farms.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🏡</div>
+          <h3 style="font-size:16px;color:#fff;font-weight:800;margin-bottom:8px">Partner Farm Transparency</h3>
+          <p style="font-size:13px;color:var(--text-muted)">Regular updates, video livestreams, and veterinary health records directly from farms.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">📱</div>
+          <h3 style="font-size:16px;color:#fff;font-weight:800;margin-bottom:8px">Digital Asset Tracking</h3>
+          <p style="font-size:13px;color:var(--text-muted)">Monitor your asset value, weight progression, and monthly profits in real time.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🔄</div>
+          <h3 style="font-size:16px;color:#fff;font-weight:800;margin-bottom:8px">Flexible Exit Option</h3>
+          <p style="font-size:13px;color:var(--text-muted)">Withdraw monthly profits or transfer your goat equity anytime at a modest 5% fee.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── MANUAL PAYMENT MODAL ───────────────────────────────────────────── -->
+  <div class="modal-overlay" id="paymentModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closePaymentModal()">✕</button>
+      <div class="section-tag" style="margin-bottom:6px">Manual Crypto Deposit</div>
+      <h3 id="modalPkgTitle" style="font-size:20px;font-weight:900;color:#fff">Elite Package Investment</h3>
+      <p id="modalPkgPrice" style="font-size:13.5px;color:var(--gold-400);font-weight:700;margin-bottom:16px">$300 (PKR 85,000) — 5% Asset Share</p>
+
+      <!-- Currency Picker -->
+      <div style="display:flex;gap:8px;margin-bottom:14px">
+        <button type="button" class="btn btn-secondary crypto-btn active" data-crypto="usdt" onclick="setCryptoCurrency('usdt')" style="flex:1;padding:8px;font-size:12px">USDT (TRC20)</button>
+        <button type="button" class="btn btn-secondary crypto-btn" data-crypto="binance" onclick="setCryptoCurrency('binance')" style="flex:1;padding:8px;font-size:12px">Binance Pay</button>
+        <button type="button" class="btn btn-secondary crypto-btn" data-crypto="btc" onclick="setCryptoCurrency('btc')" style="flex:1;padding:8px;font-size:12px">Bitcoin (BTC)</button>
+      </div>
+
+      <!-- QR & Address Display -->
+      <div style="text-align:center;background:rgba(0,0,0,0.3);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.06);margin-bottom:14px">
+        <img id="cryptoQrImg" src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=TQv8N3ZzY1jB7H5Xq4F9pL2cW6mK8xP9aB" alt="QR Code" style="width:140px;height:140px;border-radius:8px;background:#fff;padding:6px;display:block;margin:0 auto 10px">
+        <div id="cryptoTypeLabel" style="font-size:11px;font-weight:800;color:var(--text-muted);text-transform:uppercase">USDT (TRC20 Network)</div>
+        <div class="crypto-copy-box">
+          <span id="cryptoWalletAddress" style="overflow:hidden;text-overflow:ellipsis">TQv8N3ZzY1jB7H5Xq4F9pL2cW6mK8xP9aB</span>
+          <button type="button" onclick="copyWalletAddress()" class="btn btn-primary" style="padding:6px 14px;font-size:11px">Copy</button>
+        </div>
+      </div>
+
+      <!-- Verification Form -->
+      <form onsubmit="submitPaymentProof(event)">
+        <div style="margin-bottom:10px">
+          <label style="font-size:11.5px;color:var(--text-muted);font-weight:700;display:block;margin-bottom:4px">Your Full Name:</label>
+          <input type="text" id="investorNameInput" required placeholder="e.g. Ahmed Khan" style="width:100%;background:rgba(0,0,0,0.4);border:1px solid rgba(255,255,255,0.15);color:#fff;padding:9px 12px;border-radius:8px;font-size:13px">
+        </div>
+        <div style="margin-bottom:14px">
+          <label style="font-size:11.5px;color:var(--text-muted);font-weight:700;display:block;margin-bottom:4px">Transaction Hash / TXID:</label>
+          <input type="text" id="txidInput" required placeholder="Paste TXID / Order ID" style="width:100%;background:rgba(0,0,0,0.4);border:1px solid rgba(255,255,255,0.15);color:#fff;padding:9px 12px;border-radius:8px;font-size:13px">
+        </div>
+        <button type="submit" id="paymentSubmitBtn" class="btn btn-gold" style="width:100%">Submit Proof for Activation</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ─── FOOTER ─────────────────────────────────────────────────────────── -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo" style="margin-bottom:14px">
+            <div class="logo-icon">🐐</div>
+            <span style="color:#fff">Goat<span class="gradient-text">flow</span></span>
+          </div>
+          <p style="font-size:13px;line-height:1.6;margin-bottom:14px">
+            "Invest in livestock today for a more sustainable tomorrow." Real assets, real growth, real impact.
+          </p>
+          <div style="font-size:12px;color:var(--emerald-400);font-weight:800">
+            🌿 Invest • Grow • Own With Confidence
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Public Website</h4>
+          <ul>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#packages">Investment Packages</a></li>
+            <li><a href="#calculator">ROI Calculator</a></li>
+            <li><a href="#why-us">Why Choose Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Investor Portal</h4>
+          <ul>
+            <li><a href="#dashboard-preview">Live Dashboard</a></li>
+            <li><a href="#dashboard-preview">My Assets (GF-001)</a></li>
+            <li><a href="#payments">Payment Submission</a></li>
+            <li><a href="#payments">Withdrawals</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Admin Governance</h4>
+          <ul>
+            <li><a href="#" onclick="showToast('Admin Portal requires hardware security token')">Asset Approvals</a></li>
+            <li><a href="#" onclick="showToast('Veterinary checkup logs up to date')">Veterinary Reports</a></li>
+            <li><a href="#" onclick="showToast('Farm live stream operational')">Live Farm Cam</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2025 Goatflow Platform. All rights reserved. Designed as a professional livestock investment blueprint.
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
